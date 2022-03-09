@@ -22,11 +22,11 @@ exports.mapData3 = functions.firestore
     db.collection("cities")
       .doc()
       .set({
-        name: [name],
-        age: [age],
+        name: name,
+        age: age,
         doi: {
-          name: [name],
-          age: [age],
+          name: name,
+          age: age,
         },
       });
 
