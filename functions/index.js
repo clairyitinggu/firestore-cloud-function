@@ -21,9 +21,14 @@ exports.mapData3 = functions.firestore
     const public = newValue.invNumber.public || false;
     // add current value to doi collection with same docId
     db.collection("doi").doc(context.params.docId).set({
-      name: name,
-      invNumber: invNumber,
+      referenceName: name,
+      referenceIdentifier: invNumber,
       public: public,
+      primaryRefrenceType: "creation",
+      structuralType: "physical",
+      mode: "tangible",
+      character: "music",
+      refereceType: "instrument",
     });
 
     console.log(context);
