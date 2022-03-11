@@ -11,7 +11,7 @@ const db = admin.firestore();
 //   response.send("Hello from Firebase!");
 // });
 
-exports.mapData3 = functions.firestore
+exports.createData = functions.firestore
   .document("users/{docId}")
   .onCreate((snap, context) => {
     // Get current document value.
