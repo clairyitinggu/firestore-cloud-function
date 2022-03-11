@@ -101,6 +101,6 @@ addMessage is the function you might write
 
    I list below resources for reference, the Cloud Firestore triggers is really useful:
 
-[Cloud Firestore triggers]:https://firebase.google.com/docs/functions/firestore-events?authuser=0
-[Manage functions deployment and runtime options]:https://firebase.google.com/docs/functions/manage-functions#:~:text=%24-,firebase%20deploy%20%2D%2Donly%20functions,-%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B
+[Cloud Firestore triggers](https://firebase.google.com/docs/functions/firestore-events?authuser=0)
+[Manage functions deployment and runtime options](https://firebase.google.com/docs/functions/manage-functions#:~:text=%24-,firebase%20deploy%20%2D%2Donly%20functions,-%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%E4%B8%8B)
 
