@@ -12,23 +12,21 @@ const db = admin.firestore();
 // });
 
 exports.mapData3 = functions.firestore
-  .document("test2/{docId}")
+  .document("users/{docId}")
   .onCreate((snap, context) => {
-    //{'name':'Marie','age':66}
+    // Get current document value.
     const newValue = snap.data();
-    const name = newValue.name;
-    const age = newValue.age;
-    //const id = snap.query.id;
-    db.collection("cities")
-      .doc()
-      .set({
-        name: name,
-        age: age,
-        doi: {
-          name: name,
-          age: age,
-        },
-      });
+    const name = newValue.name || "";
+    const invNumber = newValue.invNumber || "";
+    const public = newValue.invNumber.public || false;
+    // add current value to doi collection with same docId
+    db.collection("doi").doc(context.params.docId).set({
+      name: name,
+      invNumber: invNumber,
+      public: public,
+    });
 
     console.log(context);
   });
+//command line
+//firebase deploy
